@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Omollo (Aggrey) | Timebucks Earning Proof & Fast Task Guide</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #162033;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --green: #10b981;
+      --blue: #38bdf8;
+      --amber: #f59e0b;
+      --border: rgba(148, 163, 184, 0.18);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 3rem; }
+    header {
+      background: #0f172a;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .logo { font-weight: 800; font-size: 1.1rem; color: var(--green); }
+    .nav-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .container { max-width: 1050px; margin: 0 auto; padding: 1.5rem 1.25rem; }
+    .hero {
+      background: linear-gradient(145deg, #162033, #0f172a);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero p { color: var(--muted); max-width: 720px; margin-bottom: 1.25rem; }
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: #06281e;
+      font-weight: 800;
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-right: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .btn.secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.15rem;
+      text-align: center;
+    }
+    .stat-card strong { display: block; font-size: 1.65rem; color: var(--green); }
+    .stat-card span { font-size: 0.85rem; color: var(--muted); }
+    h2 { font-size: 1.55rem; margin-bottom: 0.4rem; }
+    .sub { color: var(--muted); margin-bottom: 1.25rem; font-size: 0.95rem; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .proof-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .proof-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .proof-body { padding: 1.1rem; }
+    .proof-body h3 { font-size: 1.08rem; margin-bottom: 0.4rem; color: var(--blue); }
+    .proof-body p { font-size: 0.9rem; color: var(--muted); }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .step-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+    .step-num {
+      display: inline-block;
+      background: var(--blue);
+      color: #0b1120;
+      font-weight: 800;
+      padding: 0.2rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      margin-bottom: 0.6rem;
+    }
+    .step-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .step-card p { font-size: 0.9rem; color: var(--muted); }
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.9);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal.open { display: flex; }
+    .modal img { max-width: 95%; max-height: 90vh; border-radius: 12px; }
+    footer { text-align: center; color: var(--muted); font-size: 0.88rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Victor Aggrey • Timebucks Portfolio</div>
+    <nav class="nav-links">
+      <a href="#proof">Live Proof</a>
+      <a href="#steps">6-Min Task Guide</a>
+      <a href="#contact">Get Help</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">Verified Earner • UserID: 224444789</span>
+      <h1>Real Timebucks Earnings &amp; Fast 6-Minute Task Guide</h1>
+      <p>
+        Welcome to my Timebucks work showcase. Here I share real dashboard proof of completed tasks, weekly checklist bonuses, and simple step-by-step methods anyone can use to complete 6-minute tasks, get approved quickly, and cash out reliably.
+      </p>
+      <a href="#proof" class="btn">See My Dashboard Proof</a>
+      <a href="#steps" class="btn secondary">How to Earn Fast</a>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <strong>$82.522</strong>
+        <span>Lifetime Rewards Earned</span>
+      </div>
+      <div class="stat-card">
+        <strong>$63.700</strong>
+        <span>Total Cash Redeemed</span>
+      </div>
+      <div class="stat-card">
+        <strong>$18.842</strong>
+        <span>Current Unpaid Balance</span>
+      </div>
+      <div class="stat-card">
+        <strong>~6 Mins</strong>
+        <span>Avg. Fast Task Completion</span>
+      </div>
+    </section>
+
+    <section id="proof">
+      <h2>Verified Dashboard Screenshots</h2>
+      <p class="sub">Tap any screenshot below to view it full-screen.</p>
+
+      <div class="gallery">
+        <div class="proof-card">
+          <img src="proof-lifetime.jpg" alt="Timebucks Lifetime Rewards $82.522 and Total Redeemed $63.700" onclick="openModal(this.src)" />
+          <div class="proof-body">
+            <h3>1. Lifetime Earnings &amp; Payouts</h3>
+            <p><strong>$82.522 USD</strong> in total lifetime rewards earned with <strong>$63.700 USD</strong> already redeemed and paid out.</p>
+          </div>
+        </div>
+
+        <div class="proof-card">
+          <img src="proof-unpaid.jpg" alt="Timebucks Unpaid Rewards $18.442 and Bonuses $0.400" onclick="openModal(this.src)" />
+          <div class="proof-body">
+            <h3>2. Active Unpaid Balance ($18.842)</h3>
+            <p><strong>$18.442 USD</strong> in approved task/survey rewards plus <strong>$0.400 USD</strong> in bonuses ready for payout.</p>
+          </div>
+        </div>
+
+        <div class="proof-card">
+          <img src="proof-checklist.jpg" alt="Timebucks Weekly Checklist and UserID 224444789" onclick="openModal(this.src)" />
+          <div class="proof-body">
+            <h3>3. Weekly Checklist &amp; Bonus Progress</h3>
+            <p>Tracking weekly milestones on account <strong>UserID: 224444789</strong>—unlocking extra cash bonuses on top of regular tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps">
+      <h2>How to Complete 6-Minute Tasks &amp; Get Approved Immediately</h2>
+      <p class="sub">Follow these 4 simple steps to avoid rejections and build your daily balance fast:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">Step 1</span>
+          <h3>Complete Your Profile First</h3>
+          <p>Fill out your Timebucks profile details honestly and consistently so surveys and high-paying tasks unlock immediately.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">Step 2</span>
+          <h3>Pick High-Approval Fast Tasks</h3>
+          <p>Go to <strong>Tasks</strong> and look for simple signup, search, or social actions marked with high approval rates that take 5–6 minutes.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">Step 3</span>
+          <h3>Submit Exact Proof</h3>
+          <p>Read every instruction carefully and upload the exact screenshot or username requested so your submission gets approved without delay.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">Step 4</span>
+          <h3>Hit Weekly Checklist Milestones</h3>
+          <p>Combine quick Content clicks, Surveys, and Tasks to pass the $1, $3, $5, and $10 weekly milestones for automatic extra bonuses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="hero" style="margin-bottom:0;">
+      <h2>Need Guidance Starting on Timebucks?</h2>
+      <p>
+        Reach out to <strong>Victor Omollo (Aggrey)</strong> on WhatsApp at <strong>+254 720 064 972</strong> if you want step-by-step help getting started, choosing easy tasks, or setting up your payout method.
+      </p>
+      <a href="https://wa.me/254720064972" target="_blank" class="btn">Message on WhatsApp</a>
+    </section>
+  </main>
+
+  <div id="imgModal" class="modal" onclick="this.classList.remove('open')">
+    <img id="modalImg" src="" alt="Full screenshot" />
+  </div>
+
+  <footer>
+    © 2026 Victor Omollo (Aggrey) • Timebucks Work &amp; Earning Portfolio
+  </footer>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('imgModal').classList.add('open');
+    }
+  </script>
+</body>
+</html>
